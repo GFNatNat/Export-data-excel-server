@@ -213,7 +213,7 @@ export const exportCompanyExcel = async (req, res) => {
 
     entries.forEach(entry => {
       const formattedDate = new Date(entry.date).toLocaleDateString('vi-VN', {
-        day: '2-digit', month: '2-digit', year: '2-digit'
+        day: '2-digit', month: '2-digit', year: '2-digit', size : 7
       }).replace(/\//g, '.');
 
       const row = worksheet.addRow([
