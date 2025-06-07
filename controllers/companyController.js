@@ -247,6 +247,9 @@ export const exportCompanyExcel = async (req, res) => {
       row.getCell(2).font = { size: 7 };
       row.getCell(3).alignment = { wrapText: true, horizontal: 'center', vertical: 'middle' };
       row.getCell(3).font = { size: 7 };
+      row.getCell(1).alignment = { horizontal: 'center', vertical: 'middle' };
+      row.getCell(1).numFmt = 'dd.mm.yy';
+      row.getCell(1).font = { size: 9 };
 
 
       // Định dạng các cột số với dấu phẩy hàng nghìn
